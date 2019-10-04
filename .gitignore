@@ -35,3 +35,8 @@ lerna-debug.log*
 
 # database connections file
 database.json
+
+# alpine home dir files
+.ash_history
+.config/
+tsconfig.build.tsbuildinfo
