@@ -23,6 +23,8 @@ services:
     image: joelwat/node-dubnium-alpine-dev:latest
     networks:
       - bo-network
+    ports:
+      - '3000:3000'
     stdin_open: 'true'
     tty: 'true'
     volumes:
