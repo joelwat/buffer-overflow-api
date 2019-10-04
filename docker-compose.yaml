@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: percona80
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'true'
+      MYSQL_ONETIME_PASSWORD: 'true'
+    image: joelwat/buffer-overflow-db:latest
+    networks:
+      - bo-network
+    ports:
+      - '3306:3306'
+      - '33060:33060'
+    volumes:
+      - /opt/docker/percona/data80:/var/lib/mysql
+
+  api:
+    command: ['/bin/sh']
+    container_name: buffer-overflow-api
+    depends_on:
+      - db
+    image: joelwat/node-dubnium-alpine-dev:latest
+    networks:
+      - bo-network
+    stdin_open: 'true'
+    tty: 'true'
+    volumes:
+      - /home/joel/programming/buffer-overflow-api/:/home/node/
+
+networks:
+  bo-network:
