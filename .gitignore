@@ -35,6 +35,7 @@ lerna-debug.log*
 
 # database connections file
 database.json
+connections.json
 
 # alpine home dir files
 .ash_history
