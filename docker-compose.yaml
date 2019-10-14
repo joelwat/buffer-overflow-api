@@ -28,7 +28,7 @@ services:
     stdin_open: 'true'
     tty: 'true'
     volumes:
-      - /home/joel/programming/buffer-overflow-api/:/home/node/
+      - /home/joel/programming/buffer-overflow-api/:/home/node/dev
 
 networks:
   bo-network:

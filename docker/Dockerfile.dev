@@ -1,6 +1,11 @@
 FROM node:dubnium-alpine
 
-WORKDIR /home/node
+RUN mkdir /home/node/dev; \
+    chown node /home/node/dev;
+
+WORKDIR /home/node/dev
+
+RUN apk add --no-cache git
 
 USER node
 
