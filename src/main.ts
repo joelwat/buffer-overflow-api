@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
+import { INestApplication } from '@nestjs/common';
+
 import { AppModule } from './app.module';
 
 import { MySQLDataContext, ConnectionOptions, DataContext } from 'formn';
-import { INestApplication } from '@nestjs/common';
 
 async function bootstrap() {
   const connOpts: ConnectionOptions = require('../connections.json');
