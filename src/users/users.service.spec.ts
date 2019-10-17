@@ -1,4 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
+
+import { DataContextManager, FormnModule } from 'formn-nestjs-utils';
+import { DefaultDataContext } from 'formn-nestjs-utils/dist/formn/default-data-context';
+
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {
@@ -6,7 +10,14 @@ describe('UsersService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [UsersService],
+      imports: [
+        FormnModule,
+      ],
+      providers: [
+        UsersService,
+        DataContextManager,
+        DefaultDataContext,
+      ],
     }).compile();
 
     service = module.get<UsersService>(UsersService);
