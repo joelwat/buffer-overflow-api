@@ -25,6 +25,7 @@ services:
       - bo-network
     ports:
       - '3000:3000'
+      - '9229:9229'
     stdin_open: 'true'
     tty: 'true'
     volumes:

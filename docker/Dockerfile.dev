@@ -9,4 +9,4 @@ RUN apk add --no-cache git
 
 USER node
 
-EXPOSE 3000
+EXPOSE 3000 9229
