@@ -20,7 +20,7 @@ export class User {
   @Column({maxLength: 100, sqlDataType: 'varchar'})
   lastName: string | undefined;
 
-  @Column({isNullable: false, maxLength: 255, sqlDataType: 'varchar'})
+  @Column({maxLength: 255, sqlDataType: 'varchar'})
   password!: string;
 
   @Column({sqlDataType: 'datetime'})
