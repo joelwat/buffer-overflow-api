@@ -1,6 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 import { UsersService } from './users.service';
+import { User } from 'src/entities/user.entity';
 
 @Controller('users')
 export class UsersController {
@@ -8,7 +9,7 @@ export class UsersController {
   }
 
   @Get()
-  getAll() {
-    return this.usersSvc.getAll();
+  getAll(): Promise<User[]> {
+    return this.usersSvc.retrieve();
   }
 }
