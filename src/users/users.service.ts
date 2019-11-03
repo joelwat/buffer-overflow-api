@@ -1,22 +1,17 @@
 import { Injectable } from '@nestjs/common';
 
-import { DataContext } from 'formn';
-import { DataContextManager } from 'formn-nestjs-utils';
+import { CRUDService, DataContextManager } from 'formn-nestjs-utils';
 
+import { UsersDao } from './users.dao';
 import { User } from '../entities/user.entity';
 
 @Injectable()
-export class UsersService {
-  private readonly dc: DataContext;
+export class UsersService extends CRUDService<User> {
 
-  constructor(private readonly dcManager: DataContextManager) {
-    this.dc = dcManager.dataContext;
-  }
-
-  getAll() {
-    return this.dc
-      .from(User, 'u')
-      .select()
-      .execute();
+  constructor(
+    protected readonly dao: UsersDao,
+    protected readonly dc: DataContextManager,
+  ) {
+    super(dao);
   }
 }
