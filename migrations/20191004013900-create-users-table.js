@@ -20,8 +20,8 @@ exports.up = function(db) {
       CREATE TABLE users (
         id INT NOT NULL AUTO_INCREMENT,
         email VARCHAR(255) NOT NULL,
-        firstName VARCHAR(100),
-        lastName VARCHAR(100),
+        firstName VARCHAR(100) NULL,
+        lastName VARCHAR(100) NULL,
         password VARCHAR(255) NULL,
         createdOn DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
         updatedOn DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
