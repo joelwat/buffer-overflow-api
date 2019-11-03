@@ -9,7 +9,7 @@ export class UsersController {
   }
 
   @Get()
-  getAll(): Promise<User[]> {
+  retrieve(): Promise<User[]> {
     return this.usersSvc.retrieve();
   }
 
