@@ -1,4 +1,6 @@
-import { Controller, Delete, Get, Param } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+
+import { ModelTransformerPipe } from 'formn-nestjs-utils';
 
 import { UsersService } from './users.service';
 import { User } from '../entities/user.entity';
@@ -21,5 +23,10 @@ export class UsersController {
   @Get(':id')
   retrieveByID(@Param('id') id: number): Promise<User> {
     return this.usersSvc.retrieveById(id);
+  }
+
+  @Post()
+  create(@Body(new ModelTransformerPipe()) user: User): Promise<User> {
+    return this.usersSvc.create(user);
   }
 }
