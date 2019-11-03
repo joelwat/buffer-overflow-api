@@ -8,6 +8,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersController } from './users/users.controller';
 import { UsersService } from './users/users.service';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { UsersService } from './users/users.service';
       new ConnectionsFileReader()
         .readConnectionOptions('./connections.json')[0],
     ),
+    UsersModule,
   ],
   controllers: [
     AppController,
