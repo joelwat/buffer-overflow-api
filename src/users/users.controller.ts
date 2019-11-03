@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Put, Post } from '@nestjs/common';
 
 import { ModelTransformerPipe } from 'formn-nestjs-utils';
 
@@ -28,5 +28,10 @@ export class UsersController {
   @Post()
   create(@Body(new ModelTransformerPipe()) user: User): Promise<User> {
     return this.usersSvc.create(user);
+  }
+
+  @Put()
+  update(@Body(new ModelTransformerPipe()) user: User): Promise<User> {
+    return this.usersSvc.updateModel(user);
   }
 }
