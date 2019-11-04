@@ -9,25 +9,25 @@ export class User {
   email!: string;
 
   @Column({maxLength: 100, sqlDataType: 'varchar'})
-  firstName: string | undefined;
+  firstName?: string;
 
   @Column({isPrimary: true, isGenerated: true, isNullable: false, sqlDataType: 'int'})
   id!: number;
 
   @Column({sqlDataType: 'datetime'})
-  lastLogin: Date | undefined;
+  lastLogin?: Date;
 
   @Column({maxLength: 100, sqlDataType: 'varchar'})
-  lastName: string | undefined;
+  lastName?: string;
 
   @Column({maxLength: 255, sqlDataType: 'varchar'})
   password!: string;
 
   @Column({sqlDataType: 'datetime'})
-  resetExpires: Date | undefined;
+  resetExpires?: Date;
 
   @Column({maxLength: 255, sqlDataType: 'varchar'})
-  resetToken: string | undefined;
+  resetToken?: string;
 
   @Column({hasDefault: true, isNullable: false, sqlDataType: 'datetime'})
   updatedOn!: Date;
