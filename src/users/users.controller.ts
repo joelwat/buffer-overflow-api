@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Put, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Put, Post } from '@nestjs/common';
 
 import { ModelTransformerPipe } from 'formn-nestjs-utils';
 
@@ -11,7 +11,7 @@ export class UsersController {
   }
 
   @Delete(':id')
-  delete(@Param('id') id: number) {
+  delete(@Param('id', new ParseIntPipe()) id: number) {
     return this.usersSvc.deleteById(id);
   }
 
@@ -21,7 +21,7 @@ export class UsersController {
   }
 
   @Get(':id')
-  retrieveByID(@Param('id') id: number): Promise<User> {
+  retrieveByID(@Param('id', new ParseIntPipe()) id: number): Promise<User> {
     return this.usersSvc.retrieveById(id);
   }
 
