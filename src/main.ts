@@ -6,7 +6,7 @@ import { AppModule } from './app.module';
 import { BsyErrorHandlerFilter } from 'formn-nestjs-utils';
 
 async function bootstrap() {
-  const app: INestApplication = await NestFactory.create(AppModule);
+  const app: INestApplication = await NestFactory.create(AppModule, {cors: true});
 
   app.useGlobalFilters(new BsyErrorHandlerFilter());
 
