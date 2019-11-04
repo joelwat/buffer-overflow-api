@@ -14,4 +14,10 @@ export class UsersService extends CRUDService<User> {
   ) {
     super(dao);
   }
+
+  update(model: User) {
+    model.updatedOn = new Date();
+
+    return this.dao.updateModel(model);
+  }
 }
