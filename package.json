@@ -18,35 +18,35 @@
     "test:watch": "npx tsc-watch -p tsconfig.json --onSuccess \"npm run test\""
   },
   "dependencies": {
-    "@nestjs/common": "^6.8.5",
-    "@nestjs/core": "^6.8.5",
-    "@nestjs/platform-express": "^6.8.5",
-    "@types/mysql2": "github:types/mysql2",
-    "formn": "^5.12.2",
-    "formn-nestjs-utils": "^2.4.0",
-    "mysql2": "^1.7.0",
+    "@nestjs/common": "^6.10.13",
+    "@nestjs/core": "^6.10.13",
+    "@nestjs/platform-express": "^6.10.13",
+    "formn": "^5.13.0",
+    "formn-nestjs-utils": "^2.7.1",
+    "mysql2": "^2.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
-    "@nestjs/cli": "^6.11.3",
-    "@nestjs/schematics": "^6.7.0",
-    "@nestjs/testing": "^6.8.5",
+    "@nestjs/cli": "^6.12.9",
+    "@nestjs/schematics": "^6.7.6",
+    "@nestjs/testing": "^6.10.13",
     "@types/express": "^4.17.2",
-    "@types/node": "^12.12.5",
+    "@types/mysql2": "github:types/mysql2",
+    "@types/node": "^13.1.1",
     "@types/supertest": "^2.0.8",
     "db-migrate": "^0.11.6",
-    "db-migrate-mysql": "^1.1.10",
+    "db-migrate-mysql": "^2.1.0",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "supertest": "^4.0.2",
     "ts-loader": "^6.2.1",
-    "ts-node": "^8.4.1",
+    "ts-node": "^8.5.4",
     "tsc-watch": "^4.0.0",
     "tsconfig-paths": "^3.9.0",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
   }
 }
