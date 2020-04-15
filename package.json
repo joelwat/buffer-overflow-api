@@ -40,7 +40,7 @@
     "db-migrate-mysql": "^2.1.0",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "supertest": "^4.0.2",
     "ts-loader": "^7.0.0",
     "ts-node": "^8.5.4",
