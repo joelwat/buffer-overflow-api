@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^7.5.3",
-    "@nestjs/core": "^7.5.2",
+    "@nestjs/core": "^7.5.3",
     "@nestjs/platform-express": "^7.5.3",
     "formn": "^5.13.0",
     "formn-nestjs-utils": "^3.0.1",
