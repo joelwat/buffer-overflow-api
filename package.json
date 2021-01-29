@@ -43,6 +43,7 @@
     "db-migrate-mysql": "^2.1.2",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.22.1",
+    "formn-cli": "^1.2.1",
     "jasmine": "^3.6.4",
     "jasmine-console-reporter": "^3.1.0",
     "jest": "^25.5.4",

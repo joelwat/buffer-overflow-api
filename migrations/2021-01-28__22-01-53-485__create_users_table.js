@@ -1,22 +1,11 @@
 'use strict';
 
-var dbm;
-var type;
-var seed;
-
-/**
-  * We receive the dbmigrate dependency from dbmigrate initially.
-  * This enables us to not have to rely on NODE_PATH.
-  */
-exports.setup = function(options, seedLink) {
-  dbm = options.dbmigrate;
-  type = dbm.dataType;
-  seed = seedLink;
-};
-
-exports.up = function(db) {
-  return db
-    .runSql(`
+module.exports = {
+  /**
+   * Run the migration.
+   */
+  up(dataContext) {
+    const sql = `
       CREATE TABLE users (
         id INT NOT NULL AUTO_INCREMENT,
         email VARCHAR(255) NOT NULL,
@@ -32,16 +21,29 @@ exports.up = function(db) {
         CONSTRAINT uk_users_email UNIQUE KEY (email),
         INDEX idx_users_reset_token (resetToken)
       );
-    `);
-};
+    `;
+    const params = {};
 
-exports.down = function(db) {
-  return db
-    .runSql(`
+    console.log(sql);
+
+    return dataContext
+      .getExecuter()
+      .query(sql, params);
+  },
+
+  /**
+   * Bring down the migration.
+   */
+  down(dataContext) {
+    const sql = `
       DROP TABLE users;
-    `);
-};
+    `;
+    const params = {};
 
-exports._meta = {
-  "version": 1
+    console.log(sql);
+
+    return dataContext
+      .getExecuter()
+      .query(sql, params);
+  }
 };
