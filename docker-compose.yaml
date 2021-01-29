@@ -26,8 +26,8 @@ services:
     ports:
       - '3000:3000'
       - '9229:9229'
-    stdin_open: 'true'
-    tty: 'true'
+    stdin_open: true
+    tty: true
     volumes:
       - /home/joel/programming/buffer-overflow-api/:/home/node/dev
 
