@@ -11,7 +11,7 @@ export class UsersController {
   }
 
   @Delete(':id')
-  delete(@Param('id', new ParseIntPipe()) id: number) {
+  delete(@Param('id', new ParseIntPipe()) id: number): Promise<User> {
     return this.usersSvc.deleteById(id);
   }
 
