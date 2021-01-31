@@ -8,8 +8,8 @@ import { BsyErrorHandlerFilter } from 'formn-nestjs-utils';
 function gracefulShutdown(app: INestApplication) {
   console.log('Shutting down!');
 
-  app.close();
-  console.log('Http closed.');
+  app.close()
+    .then(() => console.log('Http closed.'));
 
   process.exit(0);
 }
