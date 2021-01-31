@@ -5,24 +5,25 @@ import { AppModule } from './app.module';
 
 import { BsyErrorHandlerFilter } from 'formn-nestjs-utils';
 
+function gracefulShutdown(app: INestApplication) {
+  console.log('Shutting down!');
+
+  app.close();
+  console.log('Http closed.');
+
+  process.exit(0);
+}
+
 async function bootstrap() {
   const app: INestApplication = await NestFactory.create(AppModule, {cors: true});
 
   app.useGlobalFilters(new BsyErrorHandlerFilter());
 
-  await app.listen(3000);
+  app.listen(3001)
+    .then(() => console.log('Listening on port 3000'));
 
   // Handle <Ctrl> + c
-  process.on('SIGTERM', gracefulShutdown);
-
-  function gracefulShutdown() {
-    console.log('Shutting down!');
-
-    app.close();
-    console.log('Http closed.');
-
-    process.exit(0);
-  }
+  process.on('SIGTERM', gracefulShutdown.bind(null, app));
 }
 
 bootstrap();
