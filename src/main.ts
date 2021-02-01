@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { INestApplication } from '@nestjs/common';
 
-import { AppModule } from './app.module';
-
 import { BsyErrorHandlerFilter } from 'formn-nestjs-utils';
+
+import { AppModule } from './app.module';
 
 function gracefulShutdown(app: INestApplication) {
   console.log('Shutting down!');
@@ -15,7 +15,7 @@ function gracefulShutdown(app: INestApplication) {
 }
 
 async function bootstrap() {
-  const app: INestApplication = await NestFactory.create(AppModule, {cors: true});
+  const app: INestApplication = await NestFactory.create(AppModule, { cors: true });
 
   app.useGlobalFilters(new BsyErrorHandlerFilter());
 

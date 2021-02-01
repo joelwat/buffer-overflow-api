@@ -7,7 +7,6 @@ import { User } from '../entities/user.entity';
 
 @Injectable()
 export class UsersService extends CRUDService<User> {
-
   constructor(
     protected readonly dao: UsersDao,
     protected readonly dc: DataContextManager,

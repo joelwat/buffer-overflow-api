@@ -1,4 +1,6 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Put, Post } from '@nestjs/common';
+import {
+  Body, Controller, Delete, Get, Param, ParseIntPipe, Put, Post,
+} from '@nestjs/common';
 
 import { ModelTransformerPipe } from 'formn-nestjs-utils';
 
