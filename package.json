@@ -47,7 +47,7 @@
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.22.1",
     "formn-cli": "^1.2.1",
-    "jasmine": "^3.6.4",
+    "jasmine": "^3.7.0",
     "jasmine-console-reporter": "^3.1.0",
     "jest": "^25.5.4",
     "snyk": "^1.495.0",
