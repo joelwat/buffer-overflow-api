@@ -40,7 +40,7 @@
     "@types/node": "^15.12.1",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.1",
     "db-migrate": "^0.11.12",
     "db-migrate-mysql": "^2.1.2",
     "eslint": "^7.28.0",
