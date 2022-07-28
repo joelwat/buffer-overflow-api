@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  ignore:
+  - dependency-name: snyk
+    versions:
+    - 1.507.0
+    - 1.557.0
+    - 1.559.0
+    - 1.560.0
+    - 1.563.0
+    - 1.566.0
+    - 1.568.0
+    - 1.570.0
+  - dependency-name: "@types/node"
+    versions:
+    - 15.0.0
+  - dependency-name: ts-loader
+    versions:
+    - 9.1.0
+  - dependency-name: jest
+    versions:
+    - 26.6.3
+  - dependency-name: ts-jest
+    versions:
+    - 26.5.4
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.16.0
