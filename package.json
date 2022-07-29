@@ -52,7 +52,7 @@
     "jest": "^25.5.4",
     "supertest": "^6.1.4",
     "ts-jest": "^25.5.1",
-    "ts-loader": "^9.2.5",
+    "ts-loader": "^9.3.1",
     "ts-node": "^10.9.1",
     "tsc-watch": "^4.4.0",
     "tsconfig-paths": "^3.10.1",
