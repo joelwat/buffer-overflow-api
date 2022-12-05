@@ -21,7 +21,7 @@
   "dependencies": {
     "@nestjs/common": "9.2.1",
     "@nestjs/core": "7.6.18",
-    "@nestjs/platform-express": "7.6.18",
+    "@nestjs/platform-express": "8.4.0",
     "@types/events": "3.0.0",
     "axios": "0.27.2",
     "formn": "5.14.2",
