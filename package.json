@@ -43,7 +43,7 @@
     "@typescript-eslint/parser": "4.33.0",
     "db-migrate": "0.11.13",
     "db-migrate-mysql": "2.2.0",
-    "eslint": "7.32.0",
+    "eslint": "8.30.0",
     "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-plugin-import": "2.26.0",
     "formn-cli": "1.2.1",
