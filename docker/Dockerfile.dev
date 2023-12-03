@@ -1,4 +1,4 @@
-FROM node:fermium-alpine
+FROM node:iron-alpine
 
 RUN mkdir /home/node/dev; \
     chown node /home/node/dev;
