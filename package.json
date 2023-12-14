@@ -45,7 +45,7 @@
     "db-migrate-mysql": "2.2.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb-typescript": "17.1.0",
-    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-import": "2.29.1",
     "formn-cli": "1.2.1",
     "jasmine": "4.6.0",
     "jasmine-console-reporter": "3.1.0",
